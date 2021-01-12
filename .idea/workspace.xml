@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e0377c56-a1f9-4139-a907-55f8a4ccfe84" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="ProjectId" id="1mKjpddP1h0Ceamz1ldfvswgCin" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="/usr/lib/python2.7/site-packages/ansible/plugins/callback/oneline.py" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="/usr/lib/python2.7/site-packages/ansible/plugins/callback" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="devops" type="Python.DjangoServer" factoryName="Django server">
+      <module name="devops" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="devops.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e0377c56-a1f9-4139-a907-55f8a4ccfe84" name="Default Changelist" comment="" />
+      <created>1609249360869</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609249360869</updated>
+      <workItem from="1609249382120" duration="7785000" />
+      <workItem from="1609279144581" duration="375000" />
+      <workItem from="1610217009051" duration="9192000" />
+      <workItem from="1610227526522" duration="278000" />
+      <workItem from="1610229318219" duration="43000" />
+      <workItem from="1610229373915" duration="1138000" />
+      <workItem from="1610273830724" duration="5854000" />
+      <workItem from="1610279986412" duration="4776000" />
+      <workItem from="1610285208118" duration="34000" />
+      <workItem from="1610285261096" duration="191000" />
+      <workItem from="1610285761359" duration="140000" />
+      <workItem from="1610286492595" duration="3318000" />
+      <workItem from="1610299480609" duration="886000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="542" y="265" width="824" height="429" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610223076722">
+      <screen x="0" y="28" width="1918" height="896" />
+    </state>
+    <state x="542" y="265" width="824" height="429" key="#com.intellij.fileTypes.FileTypeChooser/0.28.1918.896@0.28.1918.896" timestamp="1610223076722" />
+    <state x="692" y="179" width="524" height="601" key="FileChooserDialogImpl" timestamp="1610300276664">
+      <screen x="0" y="28" width="1918" height="896" />
+    </state>
+    <state x="692" y="179" width="524" height="601" key="FileChooserDialogImpl/0.28.1918.896@0.28.1918.896" timestamp="1610300276664" />
+    <state width="2470" height="281" key="GridCell.Tab.0.bottom" timestamp="1609258593990">
+      <screen x="0" y="28" width="2554" height="1232" />
+    </state>
+    <state width="2470" height="281" key="GridCell.Tab.0.bottom/0.28.2554.1232@0.28.2554.1232" timestamp="1609258593990" />
+    <state width="2470" height="281" key="GridCell.Tab.0.center" timestamp="1609258593982">
+      <screen x="0" y="28" width="2554" height="1232" />
+    </state>
+    <state width="2470" height="281" key="GridCell.Tab.0.center/0.28.2554.1232@0.28.2554.1232" timestamp="1609258593982" />
+    <state width="2470" height="281" key="GridCell.Tab.0.left" timestamp="1609258593982">
+      <screen x="0" y="28" width="2554" height="1232" />
+    </state>
+    <state width="2470" height="281" key="GridCell.Tab.0.left/0.28.2554.1232@0.28.2554.1232" timestamp="1609258593982" />
+    <state width="2470" height="281" key="GridCell.Tab.0.right" timestamp="1609258593989">
+      <screen x="0" y="28" width="2554" height="1232" />
+    </state>
+    <state width="2470" height="281" key="GridCell.Tab.0.right/0.28.2554.1232@0.28.2554.1232" timestamp="1609258593989" />
+    <state x="39" y="28" width="1826" height="892" key="SettingsEditor" timestamp="1609279199071">
+      <screen x="0" y="28" width="1914" height="892" />
+    </state>
+    <state x="39" y="28" width="1826" height="892" key="SettingsEditor/0.28.1914.892@0.28.1914.892" timestamp="1609279199071" />
+    <state x="529" y="98" width="850" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1610280156285">
+      <screen x="0" y="28" width="1918" height="896" />
+    </state>
+    <state x="529" y="98" width="850" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.28.1918.896@0.28.1918.896" timestamp="1610280156285" />
+  </component>
+</project>

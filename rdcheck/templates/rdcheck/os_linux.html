@@ -1,0 +1,316 @@
+{% extends "base.html" %}
+{% block basehead %}
+    {{ block.super }}
+    {% load staticfiles %}
+    <!--datatables-->
+    <meta http-equiv="refresh" content="720">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/jquery.dataTables.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/buttons.dataTables.min.css' %}" />
+    <script src="{% static 'report/datatables/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'report/datatables/dataTables.scroller.min.js' %}"></script>
+    <script src="{% static 'report/datatables/dataTables.buttons.min.js' %}"></script>
+    <script src="{% static 'report/datatables/jszip.min.js' %}"></script>
+    <script src="{% static 'report/datatables/pdfmake.min.js' %}"></script>
+    <script src="{% static 'report/datatables/vfs_fonts.js' %}"></script>
+    <script src="{% static 'report/datatables/buttons.html5.min.js' %}"></script>
+    <script src="{% static 'report/datatables/buttons.print.min.js' %}"></script>
+{% endblock %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block maincontent %}
+          <table id="rdcheck_table" class="table table-striped table-bordered table-hover table-condensed">
+              <caption><p class="text-primary" style="font-size: small">Linux巡检: 生产环境linux总计 {{ linux_host_total }} 台,已巡检 {{ check_num }}台，登记为<a href="#" style="color: green">忽略</a> {{ ignorehost_num }} 台, <a href="#" style="color: red">未巡检到</a>有{{ unroundcheck_num}}台; <a href="#" style="color: green">注: 为了快速获取指标的告警情况，推荐点击相应列的列头进行排序</a></p></caption>
+            <thead>
+            <tr>
+              <th>采集时间</th>
+              <th>ip</th>
+              <th>主机名</th>
+              <th>CPU</th>
+              <th>内存</th>
+              <th>swap</th>
+              <th>根分区</th>
+              <th>数据分区</th>
+              <th>inode</th>
+              <th>磁盘写</th>
+              <th>atom代理</th>
+              <th>zabbix</th>
+              <th>NTP配置</th>
+              <th>时差</th>
+              <th>平台</th>
+              <th>系统</th>
+              <th>软件产品</th>
+              <th>责任人</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for host in hosts %}
+                <tr>
+                  <td>{{ host.ts|time }}</td>
+                  <td>{{ host.ip }}</td>
+                  <td>{{ host.hostname }}</td>
+                {% if host.metric.cpu_used >= 90 %}
+                  <td bgcolor="f7acbc">{{ host.metric.cpu_used }}%</td>
+                  {% else %} <td>{{ host.metric.cpu_used }}%</td> {% endif %}
+                {% if host.metric.mem_used >= 90 %}
+                  <td bgcolor="f7acbc">{{ host.metric.mem_used }}%</td>
+                  {% else %} <td>{{ host.metric.mem_used }}%</td> {% endif %}
+                  <td>{{ host.metric.swap_used }}%</td>
+                {% if host.metric.fs_root_used >= 80 %}
+                  <td bgcolor="f7acbc">{{ host.metric.fs_root_used }}% 余{{ host.metric.fs_root_free|filesizeformat }}</td>
+                  {% else %} <td>{{ host.metric.fs_root_used }}%</td> {% endif %}
+                {% if host.metric.fs_data_used >= 80 %}
+                  <td bgcolor="f7acbc">{{ host.metric.fs_data_used }}% 余{{ host.metric.fs_data_free|filesizeformat }}</td>
+                  {% elif host.metric.fs_data_used == -1 %} <td>0</td>
+                  {% else %} <td>{{ host.metric.fs_data_used }}%</td> {% endif %}
+                {% if host.metric.inode_used >= 90 %}
+                  <td bgcolor="f7acbc">{{ host.metric.inode_used }}%</td>
+                {% else %} <td>{{ host.metric.inode_used }}%</td> {% endif %}
+                {% if host.metric.fs_write == 'N' %}
+                  <td bgcolor="f7acbc">{{ host.metric.fs_write }}
+                      ReadOnlyList: {%  for ro in host.metric.readonly_fs %}<p style="color: green">{{ ro }}</p>{% endfor %}
+                  </td>
+                {% else %} <td>{{ host.metric.fs_write }}</td> {% endif %}
+                <td>{{ host.metric.atom_agent }}</td>
+                <td>{{ host.metric.zabbix_agent }}</td>
+                <td>{{ host.metric.ntp_config }}</td>
+                {% if host.metric.ntp_offset <= -100 or host.metric.ntp_offset >= 100 %}
+                  <td bgcolor="f7acbc">{{ host.metric.ntp_offset }}</td>
+                {% else %} <td>{{ host.metric.ntp_offset }}</td> {% endif %}
+                  <td>{{ host.platform }}</td>
+                  <td>{{ host.os_ver }}</td>
+                  <td>{{ host.product }}</td>
+                  <td>{{ host.ops_mgr }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+{% endblock %}
+{% block tail_script %}
+
+<script>
+$(function () {
+        $('#rdcheck_table').DataTable({
+                "autoWidth":false,
+                "iDisplayLength":-1,
+                "sScrollX":"100%",
+                "sScrollXInner":"100%",
+                "paging":true,
+                "scrollY":"70vh",
+                "scroller":true,
+                "bPaginate":false,"deferRender":true,
+                "bLengthChange":false,
+                "sZeroRecords": "没有检索到数据",
+                "dom":"Bfrtip",
+                "order": [[ 6, "desc"]],
+                 "buttons": [ 'copyHtml5','excelHtml5','csvHtml5','pdfHtml5']
+        });
+      });
+</script>
+
+	<style>
+		body,
+		html {
+			margin: 0;
+			font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+		}
+		table.dataTable {
+			width: 100%;
+			margin: 0 auto;
+			clear: both;
+			border-collapse: separate;
+			border-spacing: 0;
+		}
+
+		table.dataTable thead th,
+		table.dataTable tfoot th {
+			font-weight: bold;
+		}
+
+		table.dataTable thead th,
+		table.dataTable thead td {
+			padding: 10px 18px;
+			border-bottom: 1px solid #111;
+		}
+
+		table.dataTable thead th:active,
+		table.dataTable thead td:active {
+			outline: none;
+		}
+
+		table.dataTable tfoot th,
+		table.dataTable tfoot td {
+			padding: 10px 18px 6px 18px;
+			border-top: 1px solid #111;
+		}
+
+		table.dataTable tbody th,
+		table.dataTable tbody td {
+			padding: 8px 10px;
+		}
+
+		#table_wrapper {
+			margin: 20px 40px;
+		}
+
+		table tr th,
+		table tr td {
+			text-align: left;
+			white-space: nowrap;
+		}
+
+		#table_wrapper .dataTables_length,
+		#table_wrapper .dataTables_filter {
+			margin-bottom: 20px;
+			font-size: 10px;
+			text-transform: uppercase;
+			float: right;
+   		margin-left: 20px;
+		}
+
+		#table_wrapper .dataTables_length label,
+		#table_wrapper .dataTables_filter label,
+		#table_wrapper .dataTables_paginate a,
+		#table_wrapper .dataTables_info {
+			color: #039 !important;
+		}
+
+		#table_wrapper .dataTables_filter input {
+			margin: 0 3px;
+		}
+
+		#table_wrapper .dataTables_paginate a,
+		#table_wrapper .dataTables_info {
+			font-size: 10px;
+			text-transform: uppercase;
+		}
+
+		#table_wrapper .dataTables_paginate {
+			float: right;
+		}
+
+		#table_wrapper .dataTables_paginate,
+		#table_wrapper .dataTables_info {
+			display: inline-block;
+			margin-top: 10px;
+		}
+
+		#table_wrapper .dataTables_paginate a {
+			padding: 3px 6px;
+			margin: 0 5px;
+			cursor: pointer;
+		}
+
+		#table_wrapper .dataTables_paginate a.current {
+			color: #fff !important;
+			background: #039;
+		}
+
+		#table_wrapper table {
+			font-size: 12px;
+			background: #fff;
+			border-collapse: collapse;
+			text-align: left;
+			width: 100%;
+		}
+
+		#table_wrapper table caption {
+			font-size: 20px;
+			color: #039;
+			text-align: left;
+			margin-bottom: 10px;
+		}
+
+		#table_wrapper table th {
+			font-size: 14px;
+			font-weight: normal;
+			color: #039;
+			padding: 10px 8px;
+			border-bottom: 2px solid #6678b1;
+			position: relative;
+		}
+
+		#table_wrapper .dataTables_scrollHead th.sorting,
+		#table_wrapper .dataTables_scrollHead th.sorting_asc,
+		#table_wrapper .dataTables_scrollHead th.sorting_desc {
+			position: relative;
+			cursor: pointer;
+		}
+
+		#table_wrapper .dataTables_scrollHead th.sorting:before,
+		#table_wrapper .dataTables_scrollHead th.sorting_asc:before,
+		#table_wrapper .dataTables_scrollHead th.sorting:after,
+		#table_wrapper .dataTables_scrollHead th.sorting_desc:after {
+			border: 4px solid transparent;
+			position: absolute;
+			display: block;
+			content: "";
+			height: 0;
+			right: 8px;
+			top: 50%;
+			width: 0;
+			opacity: 0.4;
+		}
+
+		#table_wrapper .dataTables_scrollHead th.sorting:before,
+		#table_wrapper .dataTables_scrollHead th.sorting_asc:before {
+			border-bottom-color: #669;
+			margin-top: -9px;
+		}
+
+		#table_wrapper .dataTables_scrollHead th.sorting:after,
+		#table_wrapper .dataTables_scrollHead th.sorting_desc:after {
+			border-top-color: #669;
+			margin-top: 1px;
+		}
+
+		#table_wrapper table td {
+			border-bottom: 1px solid #ccc;
+			color: #669;
+			padding: 6px 8px;
+		}
+
+		#table_wrapper table tbody tr:hover td {
+			color: #009;
+		}
+
+		.dt-buttons {
+			display: inline-block;
+		}
+
+		.dt-button {
+			color: #FFFFFF;
+			background: #039;
+			margin-right: 10px;
+			padding: 6px 12px;
+			cursor: pointer;
+			-webkit-transition: all 60ms ease-in-out;
+			transition: all 60ms ease-in-out;
+			text-align: center;
+			white-space: nowrap;
+			text-decoration: none !important;
+			text-transform: none;
+			text-transform: capitalize;
+			border: 0 none;
+			border-radius: 2px;
+			font-size: 11px;
+			line-height: 1.3;
+			text-transform: uppercase;
+		}
+
+		.dt-button-info {
+			padding: 50px;
+			color: #039;
+			text-align: center;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(255, 255, 255, 0.7)
+		}
+
+		.dt-button-info h2 {
+			display: none;
+		}
+        </style>
+{% endblock %}

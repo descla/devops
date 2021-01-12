@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    {% load static %}
+    {% block basehead %}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pace/dataurl.css' %}" />
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <!--[if lt IE 9]>
+    <script src="{% static 'js/bootstrap/html5shiv.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap/respond.min.js' %}"></script>
+    <![endif]-->
+    <!--页面加载进度条-->
+    <script src="{% static 'js/pace/pace.min.js' %}"></script>
+    <script src="{% static 'js/jquery.scrolltopcontrol/scrolltopcontrol.js' %}"></script>
+    <script src="{% static 'js/jquery.extend.js' %}"></script>
+    <script src="{% static 'js/default.js' %}"></script>
+    {% endblock %}
+    <title>{% block title %}运维开发{% endblock %}</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle show pull-left" data-target="sidebar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">成都银行</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="http://10.128.128.156/duty" target="_blank">值班表</a></li>
+                    <li><a href="http://10.0.8.85:8080/icms-auto" target="_blank">自动化运维平台</a></li>
+                    <li><a href="http://10.128.128.219/zabbix" target="_blank">zabbix监控</a></li>
+                    <li><a href="http://10.0.8.93:9999/login.html" target="_blank">集中告警平台</a></li>
+                    <li><a href="http://10.0.8.42:8001/svn.html" target="_blank">部门SVN</a></li>
+                    <li><a href="http://10.128.1.113/srcu/loginFromMDM.jsp" target="_blank">ITSM</a></li>
+                    <li><a href="/cloud/" target="_blank">云平台信息</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                           <i class="fa fa-fw"></i>更多<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="http://10.0.8.20:8080/" target="_blank"><i class="fa fa-sign-out fa-fw"></i>&nbsp;TFS日报</a></li>
+                            </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="/xadmin" role="button"><i class="fa fa-user fa-fw"></i>&nbsp;Login&nbsp;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid all">
+    {% block sidebar %}
+        <div class="sidebar">
+            <ul class="nav">
+                <li><a href="javascript:void(0);">主页面</a></li>
+                <li class="has-sub">
+                    <a href="javascript:void(0);"><span>cmdb展示</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
+                    <ul class="sub-menu">
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a href="javascript:void(0);"><span>数据库信息</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
+                    <ul class="sub-menu">
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a href="javascript:void(0);"><span>工作总表相关</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
+                    <ul class="sub-menu">
+                    </ul>
+                </li>
+
+                <li class="has-sub">
+                    <a href="javascript:void(0);"><span>巡检</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
+                    <ul class="sub-menu">
+                        <li><a href="{% url 'rdcheck:linux' %}"><i class="fa fa-circle-o fa-fw"></i>Linux巡检</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    {% endblock %}
+        <div id="maincontent" class="maincontent" >
+            {% block maincontent %}{% endblock %}
+
+        </div>
+    </div>
+    <a href="#top" id="goTop"><i class="fa fa-angle-up fa-3x"></i></a>
+{% block tail_script %}{% endblock %}
+</body>
+</html>
