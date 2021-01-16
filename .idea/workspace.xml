@@ -2,9 +2,100 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0377c56-a1f9-4139-a907-55f8a4ccfe84" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ansible_app/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ansible_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ansible_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devops/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/devops/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rdcheck/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/rdcheck/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rdcheck/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rdcheck/migrations/0002_auto_20201229_1521.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rdcheck/migrations/0003_auto_20210113_1858.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rdcheck/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/rdcheck/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/auth/password_reset/complete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/auth/password_reset/confirm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/auth/password_reset/done.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/auth/password_reset/email.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/auth/password_reset/form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/auth/user/add_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/auth/user/change_password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/base_site.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/blocks/comm.top.setlang.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/blocks/comm.top.theme.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/blocks/comm.top.topnav.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/blocks/modal_list.left_navbar.quickfilter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/blocks/model_form.before_fieldsets.wizard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/blocks/model_form.submit_line.wizard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/blocks/model_list.nav_form.search_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/blocks/model_list.nav_menu.bookmarks.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/blocks/model_list.nav_menu.filters.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/blocks/model_list.results_bottom.actions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/blocks/model_list.results_top.charts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/blocks/model_list.results_top.date_hierarchy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/blocks/model_list.top_toolbar.exports.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/blocks/model_list.top_toolbar.importexport.export.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/blocks/model_list.top_toolbar.importexport.import.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/blocks/model_list.top_toolbar.layouts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/blocks/model_list.top_toolbar.refresh.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/blocks/model_list.top_toolbar.saveorder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/edit_inline/accordion.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/edit_inline/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/edit_inline/blank.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/edit_inline/one.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/edit_inline/stacked.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/edit_inline/tab.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/edit_inline/tabular.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/filters/char.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/filters/checklist.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/filters/date.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/filters/fk_search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/filters/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/filters/number.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/filters/quickfilter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/filters/rel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/forms/transfer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/grids/thumbnails.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/import_export/export_action.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/import_export/import.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/includes/box.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/includes/pagination.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/includes/sitemenu_accordion.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/includes/sitemenu_default.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/includes/submit_line.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/includes/toggle_back.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/includes/toggle_menu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/layout/field_value.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/layout/field_value_td.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/layout/fieldset.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/layout/input_group.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/layout/td-field.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/app_index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/batch_change_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/invalid_setup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/logged_out.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/model_dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/model_delete_confirm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/model_delete_selected_confirm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/model_detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/model_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/model_history.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/model_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/quick_detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/quick_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/recover_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/recover_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/revision_diff.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/views/revision_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/widgets/addform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/widgets/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/widgets/chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/widgets/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/xadmin/widgets/qbutton.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,11 +116,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="/usr/lib/python2.7/site-packages/ansible/plugins/callback/oneline.py" />
+    <property name="last_opened_file_path" value="/data/icms-shell/create_inventory.py" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -98,7 +190,11 @@
       <workItem from="1610286492595" duration="3318000" />
       <workItem from="1610299480609" duration="886000" />
       <workItem from="1610481034806" duration="1249000" />
-      <workItem from="1610551606872" duration="1103000" />
+      <workItem from="1610551606872" duration="7687000" />
+      <workItem from="1610568668355" duration="1439000" />
+      <workItem from="1610639821882" duration="3855000" />
+      <workItem from="1610721406159" duration="3826000" />
+      <workItem from="1610784430217" duration="3215000" />
     </task>
     <servers />
   </component>
@@ -110,30 +206,44 @@
       <screen x="0" y="28" width="1918" height="896" />
     </state>
     <state x="542" y="265" width="824" height="429" key="#com.intellij.fileTypes.FileTypeChooser/0.28.1918.896@0.28.1918.896" timestamp="1610223076722" />
-    <state x="692" y="179" width="524" height="601" key="FileChooserDialogImpl" timestamp="1610300276664">
-      <screen x="0" y="28" width="1918" height="896" />
+    <state x="923" y="236" width="524" height="601" key="FileChooserDialogImpl" timestamp="1610640649698">
+      <screen x="0" y="28" width="2558" height="1236" />
     </state>
     <state x="692" y="179" width="524" height="601" key="FileChooserDialogImpl/0.28.1918.896@0.28.1918.896" timestamp="1610300276664" />
-    <state width="2470" height="281" key="GridCell.Tab.0.bottom" timestamp="1609258593990">
-      <screen x="0" y="28" width="2554" height="1232" />
+    <state x="923" y="236" key="FileChooserDialogImpl/0.28.2558.1236@0.28.2558.1236" timestamp="1610640649698" />
+    <state width="1852" height="200" key="GridCell.Tab.0.bottom" timestamp="1610786654624">
+      <screen x="0" y="28" width="1918" height="896" />
     </state>
+    <state width="1852" height="200" key="GridCell.Tab.0.bottom/0.28.1918.896@0.28.1918.896" timestamp="1610786654624" />
     <state width="2470" height="281" key="GridCell.Tab.0.bottom/0.28.2554.1232@0.28.2554.1232" timestamp="1609258593990" />
-    <state width="2470" height="281" key="GridCell.Tab.0.center" timestamp="1609258593982">
-      <screen x="0" y="28" width="2554" height="1232" />
+    <state width="2486" height="297" key="GridCell.Tab.0.bottom/0.28.2558.1236@0.28.2558.1236" timestamp="1610726475516" />
+    <state width="2488" height="393" key="GridCell.Tab.0.bottom/0.28.2560.1538@0.28.2560.1538" timestamp="1610570110727" />
+    <state width="1852" height="200" key="GridCell.Tab.0.center" timestamp="1610786654623">
+      <screen x="0" y="28" width="1918" height="896" />
     </state>
+    <state width="1852" height="200" key="GridCell.Tab.0.center/0.28.1918.896@0.28.1918.896" timestamp="1610786654623" />
     <state width="2470" height="281" key="GridCell.Tab.0.center/0.28.2554.1232@0.28.2554.1232" timestamp="1609258593982" />
-    <state width="2470" height="281" key="GridCell.Tab.0.left" timestamp="1609258593982">
-      <screen x="0" y="28" width="2554" height="1232" />
+    <state width="2486" height="297" key="GridCell.Tab.0.center/0.28.2558.1236@0.28.2558.1236" timestamp="1610726475515" />
+    <state width="2488" height="393" key="GridCell.Tab.0.center/0.28.2560.1538@0.28.2560.1538" timestamp="1610570110727" />
+    <state width="1852" height="200" key="GridCell.Tab.0.left" timestamp="1610786654622">
+      <screen x="0" y="28" width="1918" height="896" />
     </state>
+    <state width="1852" height="200" key="GridCell.Tab.0.left/0.28.1918.896@0.28.1918.896" timestamp="1610786654622" />
     <state width="2470" height="281" key="GridCell.Tab.0.left/0.28.2554.1232@0.28.2554.1232" timestamp="1609258593982" />
-    <state width="2470" height="281" key="GridCell.Tab.0.right" timestamp="1609258593989">
-      <screen x="0" y="28" width="2554" height="1232" />
+    <state width="2486" height="297" key="GridCell.Tab.0.left/0.28.2558.1236@0.28.2558.1236" timestamp="1610726475514" />
+    <state width="2488" height="393" key="GridCell.Tab.0.left/0.28.2560.1538@0.28.2560.1538" timestamp="1610570110726" />
+    <state width="1852" height="200" key="GridCell.Tab.0.right" timestamp="1610786654623">
+      <screen x="0" y="28" width="1918" height="896" />
     </state>
+    <state width="1852" height="200" key="GridCell.Tab.0.right/0.28.1918.896@0.28.1918.896" timestamp="1610786654623" />
     <state width="2470" height="281" key="GridCell.Tab.0.right/0.28.2554.1232@0.28.2554.1232" timestamp="1609258593989" />
-    <state x="52" y="28" width="1826" height="892" key="SettingsEditor" timestamp="1610552159867">
-      <screen x="0" y="28" width="2560" height="1538" />
+    <state width="2486" height="297" key="GridCell.Tab.0.right/0.28.2558.1236@0.28.2558.1236" timestamp="1610726475516" />
+    <state width="2488" height="393" key="GridCell.Tab.0.right/0.28.2560.1538@0.28.2560.1538" timestamp="1610570110727" />
+    <state x="39" y="28" width="1369" height="896" key="SettingsEditor" timestamp="1610784457168">
+      <screen x="0" y="28" width="1918" height="896" />
     </state>
     <state x="39" y="28" width="1826" height="892" key="SettingsEditor/0.28.1914.892@0.28.1914.892" timestamp="1609279199071" />
+    <state x="39" y="28" width="1369" height="896" key="SettingsEditor/0.28.1918.896@0.28.1918.896" timestamp="1610784457168" />
     <state x="52" y="28" key="SettingsEditor/0.28.2560.1538@0.28.2560.1538" timestamp="1610552159867" />
     <state x="529" y="98" width="850" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1610280156285">
       <screen x="0" y="28" width="1918" height="896" />
