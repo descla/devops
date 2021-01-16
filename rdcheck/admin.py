@@ -4,4 +4,4 @@ from django.contrib import admin
 
 from . import models
 
-admin.site.register([models.t_hosts,models.t_app,models.t_db_schema])
+admin.site.register(models.t_result)

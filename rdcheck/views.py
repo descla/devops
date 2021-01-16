@@ -28,11 +28,9 @@ def index(request):
     return HttpResponse("Hello,world.You are at the roundcheck index")
 
 
-def test(request):
-    context = {'latest_question_list': [{'id': 1, 'question_text': 'abc'}, {'id': 2, 'question_text': 'cc'}, ]}
-    return render(request, 'rdcheck/test.html', context)
-
-
-
 def linux_roundcheck(request):
+    pass
+
+
+def oracle_roundcheck(request):
     pass

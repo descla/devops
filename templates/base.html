@@ -78,25 +78,23 @@
             <ul class="nav">
                 <li><a href="javascript:void(0);">主页面</a></li>
                 <li class="has-sub">
-                    <a href="javascript:void(0);"><span>cmdb展示</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
+                    <a href="javascript:void(0);"><span>应用表</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
                     <ul class="sub-menu">
                     </ul>
                 </li>
                 <li class="has-sub">
-                    <a href="javascript:void(0);"><span>数据库信息</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
-                    <ul class="sub-menu">
-                    </ul>
-                </li>
-                <li class="has-sub">
-                    <a href="javascript:void(0);"><span>工作总表相关</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
+                    <a href="javascript:void(0);"><span>主机表</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
                     <ul class="sub-menu">
                     </ul>
                 </li>
 
                 <li class="has-sub">
-                    <a href="javascript:void(0);"><span>巡检</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
+                    <a href="javascript:void(0);"><span>巡检结果</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
                     <ul class="sub-menu">
                         <li><a href="{% url 'rdcheck:linux' %}"><i class="fa fa-circle-o fa-fw"></i>Linux巡检</a></li>
+                    </ul>
+                    <ul class="sub-menu">
+                        <li><a href="{% url 'rdcheck:oracle' %}"><i class="fa fa-circle-o fa-fw"></i>Oracle巡检</a></li>
                     </ul>
                 </li>
             </ul>

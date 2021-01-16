@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rdcheck',
     'ansible_app',
+    'inventory',
 ]
 
 MIDDLEWARE = [
