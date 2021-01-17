@@ -6,6 +6,6 @@ from . import views
 app_name = 'rdcheck'
 urlpatterns = [
     path('', views.index, name='index'),
-    path('linux', views.linux_roundcheck, name='linux'),
-    path('oracle', views.oracle_roundcheck, name='oracle'),
+    path('linux/', views.linux_roundcheck, name='linux'),
+    path('oracle/', views.oracle_roundcheck, name='oracle'),
 ]
