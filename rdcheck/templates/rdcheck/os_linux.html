@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block basehead %}
     {{ block.super }}
-    {% load staticfiles %}
+    {% load static %}
     <!--datatables-->
     <meta http-equiv="refresh" content="720">
     <link rel="stylesheet" type="text/css" href="{% static 'css/jquery.dataTables.min.css' %}" />
@@ -28,18 +28,15 @@
               <th>CPU</th>
               <th>内存</th>
               <th>swap</th>
-              <th>根分区</th>
-              <th>数据分区</th>
+              <th>m数据_max</th>
+              <th>nfs_max</th>
               <th>inode</th>
-              <th>磁盘写</th>
-              <th>atom代理</th>
               <th>zabbix</th>
               <th>NTP配置</th>
               <th>时差</th>
               <th>平台</th>
               <th>系统</th>
-              <th>软件产品</th>
-              <th>责任人</th>
+              <th>应用</th>
             </tr>
             </thead>
             <tbody>

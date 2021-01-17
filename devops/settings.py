@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'rdcheck',
     'ansible_app',
     'inventory',
+    'report',
 ]
 
 MIDDLEWARE = [
@@ -56,8 +57,7 @@ ROOT_URLCONF = 'devops.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,6 +127,7 @@ STATIC_URL = '/static/'
 DEBUG = True
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'rdcheck/static'),
     # os.path.join(BASE_DIR,'report', 'static'),
 ]
 

@@ -1,12 +1,13 @@
 from django.shortcuts import render, HttpResponse
 from django.http import JsonResponse
-from django.db import connection
 from django.views.decorators.csrf import csrf_exempt
 from django.core import serializers
 import json
-from datetime import datetime, date
+from datetime import datetime, date, timedelta
 import pdb
-from .models import t_linux_result, t_oracle_result, t_hosts
+from .models import t_linux_result
+from inventory.models import t_hosts
+
 
 # Create your views here.
 
@@ -30,9 +31,10 @@ def index(request):
 
 def linux_roundcheck(request):
     if request.method == 'GET':
-        hosts = t_linux_result.objects.all()
-        print(hosts)
-
+        today = datetime.now()
+        p1 = timedelta(days=1)
+        hosts = t_linux_result.objects.filter(ts__range=[today.date(), (today+p1).date()])
+    return render(request, 'rdcheck/os_linux.html', hosts)
 
 def oracle_roundcheck(request):
     pass

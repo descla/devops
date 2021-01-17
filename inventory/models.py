@@ -7,7 +7,7 @@ from django.db import models
 # 应用的名称，简称， 等级
 class t_app(models.Model):
     def __str__(self):
-        return self.app_name
+        return str(self.app_name)
 
     app_name = models.CharField('应用名', max_length=32, primary_key=True)
     app_level = models.CharField('级别', max_length=2, blank=True, null=True)
@@ -50,7 +50,7 @@ class t_hosts(models.Model):
     )
     location = models.CharField('loc', max_length=10, blank=True, null=True)
     ip = models.CharField('ip', max_length=20, blank=True, null=False, primary_key=True)
-    is_rdcheck = models.BooleanField('是否巡检', choices=rdcheck_choice, blank=False)
+    is_rdcheck = models.BooleanField('是否巡检', choices=rdcheck_choice, blank=False, default=True)
     os_type = models.CharField('OS', choices=os_choice, max_length=16, blank=True, null=True)
     os_version = models.CharField('版本', max_length=32, blank=True, null=True)
     device = models.CharField('设备类型', choices=device_choice, max_length=16, blank=True, null=True)
@@ -66,4 +66,4 @@ class t_hosts(models.Model):
         verbose_name_plural = '主机表'
 
     def __str__(self):
-        return '_'.join([self.ip, self.app.app_name])
+        return str('_'.join([self.ip, self.app.app_name]))
