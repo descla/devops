@@ -57,6 +57,7 @@ class Oracle_Log(object):
             log["DATE"] = tmp[-2].split('\t')[0].strip()
             log["SIZE"] = tmp[-2].split('\t')[1].strip()
         data = content.strip().split('\n')
+        print(data)
         table["ARCHIVED"] = log
         # list删除,必须从后删除
         for i in range(len(data)-1, -1, -1):
@@ -78,8 +79,6 @@ class Oracle_Log(object):
 
 test = Oracle_Log()
 t = test.clean_tables_data()
-for k,v in t.items():
-    print(k,v)
 
 
 def dict_dump_tomlfile(data, tomlfile):
