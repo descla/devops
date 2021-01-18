@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e0377c56-a1f9-4139-a907-55f8a4ccfe84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/oracle_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/oracle_log.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,17 +54,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/scripts" />
-      <recent name="$USER_HOME$" />
-      <recent name="/usr/lib/python2.7/site-packages/ansible/plugins/callback" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scripts" />
       <recent name="$PROJECT_DIR$/rdcheck" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rdcheck" />
+      <recent name="$PROJECT_DIR$/scripts" />
+      <recent name="$USER_HOME$" />
+      <recent name="/usr/lib/python2.7/site-packages/ansible/plugins/callback" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.oracle_logv2">
+  <component name="RunManager" selected="Python.oracle_logv3">
     <configuration name="linux_roundcheck (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="devops" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -80,28 +80,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/linux_roundcheck.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="linux_roundcheck" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="devops" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/linux_roundcheck.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -176,6 +154,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="oracle_logv3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="devops" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rdcheck" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rdcheck/oracle_logv3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="devops" type="Python.DjangoServer" factoryName="Django server">
       <module name="devops" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -202,11 +202,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.oracle_logv3" />
         <item itemvalue="Python.oracle_logv2" />
         <item itemvalue="Python.oracle_log" />
         <item itemvalue="Python.linux_roundcheck (1)" />
         <item itemvalue="Python.loaddata_os" />
-        <item itemvalue="Python.linux_roundcheck" />
       </list>
     </recent_temporary>
   </component>
@@ -261,7 +261,9 @@
       <workItem from="1610900570151" duration="19119000" />
       <workItem from="1610960189310" duration="3913000" />
       <workItem from="1610971957691" duration="4215000" />
-      <workItem from="1611057308179" duration="27663000" />
+      <workItem from="1611057308179" duration="29737000" />
+      <workItem from="1611146639807" duration="2403000" />
+      <workItem from="1610987957112" duration="10151000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;modify models&quot;">
       <created>1610787893410</created>
@@ -310,62 +312,62 @@
     <state x="692" y="179" width="524" height="601" key="FileChooserDialogImpl/0.28.1918.896@0.28.1918.896" timestamp="1610300276664" />
     <state x="693" y="199" key="FileChooserDialogImpl/0.28.1920.1018@0.28.1920.1018" timestamp="1610817050724" />
     <state x="923" y="236" key="FileChooserDialogImpl/0.28.2558.1236@0.28.2558.1236" timestamp="1610640649698" />
-    <state width="2492" height="963" key="GridCell.Tab.0.bottom" timestamp="1610998028299">
+    <state width="2492" height="362" key="GridCell.Tab.0.bottom" timestamp="1610998003140">
       <screen x="0" y="28" width="2554" height="1232" />
     </state>
     <state width="1089" height="448" key="GridCell.Tab.0.bottom/0.28.1151.1143@0.28.1151.1143" timestamp="1611067839572" />
     <state width="1856" height="292" key="GridCell.Tab.0.bottom/0.28.1918.896@0.28.1918.896" timestamp="1610798646867" />
     <state width="1858" height="309" key="GridCell.Tab.0.bottom/0.28.1920.1018@0.28.1920.1018" timestamp="1610921788280" />
-    <state width="2492" height="963" key="GridCell.Tab.0.bottom/0.28.2554.1232@0.28.2554.1232" timestamp="1610998028299" />
+    <state width="2492" height="362" key="GridCell.Tab.0.bottom/0.28.2554.1232@0.28.2554.1232" timestamp="1610998003140" />
     <state width="2486" height="297" key="GridCell.Tab.0.bottom/0.28.2558.1236@0.28.2558.1236" timestamp="1610726475516" />
-    <state width="2498" height="297" key="GridCell.Tab.0.bottom/0.28.2560.1538@0.28.2560.1538" timestamp="1611063632400" />
-    <state width="2492" height="963" key="GridCell.Tab.0.center" timestamp="1610998028298">
+    <state width="2498" height="771" key="GridCell.Tab.0.bottom/0.28.2560.1538@0.28.2560.1538" timestamp="1610987623114" />
+    <state width="2492" height="362" key="GridCell.Tab.0.center" timestamp="1610998003139">
       <screen x="0" y="28" width="2554" height="1232" />
     </state>
     <state width="1089" height="448" key="GridCell.Tab.0.center/0.28.1151.1143@0.28.1151.1143" timestamp="1611067839572" />
     <state width="1856" height="292" key="GridCell.Tab.0.center/0.28.1918.896@0.28.1918.896" timestamp="1610798646866" />
     <state width="1858" height="309" key="GridCell.Tab.0.center/0.28.1920.1018@0.28.1920.1018" timestamp="1610921788279" />
-    <state width="2492" height="963" key="GridCell.Tab.0.center/0.28.2554.1232@0.28.2554.1232" timestamp="1610998028298" />
+    <state width="2492" height="362" key="GridCell.Tab.0.center/0.28.2554.1232@0.28.2554.1232" timestamp="1610998003139" />
     <state width="2486" height="297" key="GridCell.Tab.0.center/0.28.2558.1236@0.28.2558.1236" timestamp="1610726475515" />
-    <state width="2498" height="297" key="GridCell.Tab.0.center/0.28.2560.1538@0.28.2560.1538" timestamp="1611063632399" />
-    <state width="2492" height="963" key="GridCell.Tab.0.left" timestamp="1610998028298">
+    <state width="2498" height="771" key="GridCell.Tab.0.center/0.28.2560.1538@0.28.2560.1538" timestamp="1610987623112" />
+    <state width="2492" height="362" key="GridCell.Tab.0.left" timestamp="1610998003138">
       <screen x="0" y="28" width="2554" height="1232" />
     </state>
     <state width="1089" height="448" key="GridCell.Tab.0.left/0.28.1151.1143@0.28.1151.1143" timestamp="1611067839571" />
     <state width="1856" height="292" key="GridCell.Tab.0.left/0.28.1918.896@0.28.1918.896" timestamp="1610798646865" />
     <state width="1858" height="309" key="GridCell.Tab.0.left/0.28.1920.1018@0.28.1920.1018" timestamp="1610921788278" />
-    <state width="2492" height="963" key="GridCell.Tab.0.left/0.28.2554.1232@0.28.2554.1232" timestamp="1610998028298" />
+    <state width="2492" height="362" key="GridCell.Tab.0.left/0.28.2554.1232@0.28.2554.1232" timestamp="1610998003138" />
     <state width="2486" height="297" key="GridCell.Tab.0.left/0.28.2558.1236@0.28.2558.1236" timestamp="1610726475514" />
-    <state width="2498" height="297" key="GridCell.Tab.0.left/0.28.2560.1538@0.28.2560.1538" timestamp="1611063632394" />
-    <state width="2492" height="963" key="GridCell.Tab.0.right" timestamp="1610998028298">
+    <state width="2498" height="771" key="GridCell.Tab.0.left/0.28.2560.1538@0.28.2560.1538" timestamp="1610987623110" />
+    <state width="2492" height="362" key="GridCell.Tab.0.right" timestamp="1610998003140">
       <screen x="0" y="28" width="2554" height="1232" />
     </state>
     <state width="1089" height="448" key="GridCell.Tab.0.right/0.28.1151.1143@0.28.1151.1143" timestamp="1611067839572" />
     <state width="1856" height="292" key="GridCell.Tab.0.right/0.28.1918.896@0.28.1918.896" timestamp="1610798646866" />
     <state width="1858" height="309" key="GridCell.Tab.0.right/0.28.1920.1018@0.28.1920.1018" timestamp="1610921788279" />
-    <state width="2492" height="963" key="GridCell.Tab.0.right/0.28.2554.1232@0.28.2554.1232" timestamp="1610998028298" />
+    <state width="2492" height="362" key="GridCell.Tab.0.right/0.28.2554.1232@0.28.2554.1232" timestamp="1610998003140" />
     <state width="2486" height="297" key="GridCell.Tab.0.right/0.28.2558.1236@0.28.2558.1236" timestamp="1610726475516" />
-    <state width="2498" height="297" key="GridCell.Tab.0.right/0.28.2560.1538@0.28.2560.1538" timestamp="1611063632399" />
-    <state width="2492" height="646" key="GridCell.Tab.1.bottom" timestamp="1610994226005">
+    <state width="2498" height="771" key="GridCell.Tab.0.right/0.28.2560.1538@0.28.2560.1538" timestamp="1610987623113" />
+    <state width="2492" height="646" key="GridCell.Tab.1.bottom" timestamp="1611000113802">
       <screen x="0" y="28" width="2554" height="1232" />
     </state>
     <state width="1858" height="309" key="GridCell.Tab.1.bottom/0.28.1920.1018@0.28.1920.1018" timestamp="1610921788281" />
-    <state width="2492" height="646" key="GridCell.Tab.1.bottom/0.28.2554.1232@0.28.2554.1232" timestamp="1610994226005" />
-    <state width="2492" height="646" key="GridCell.Tab.1.center" timestamp="1610994226005">
+    <state width="2492" height="646" key="GridCell.Tab.1.bottom/0.28.2554.1232@0.28.2554.1232" timestamp="1611000113802" />
+    <state width="2492" height="646" key="GridCell.Tab.1.center" timestamp="1611000113802">
       <screen x="0" y="28" width="2554" height="1232" />
     </state>
     <state width="1858" height="309" key="GridCell.Tab.1.center/0.28.1920.1018@0.28.1920.1018" timestamp="1610921788280" />
-    <state width="2492" height="646" key="GridCell.Tab.1.center/0.28.2554.1232@0.28.2554.1232" timestamp="1610994226005" />
-    <state width="2492" height="646" key="GridCell.Tab.1.left" timestamp="1610994226005">
+    <state width="2492" height="646" key="GridCell.Tab.1.center/0.28.2554.1232@0.28.2554.1232" timestamp="1611000113802" />
+    <state width="2492" height="646" key="GridCell.Tab.1.left" timestamp="1611000113802">
       <screen x="0" y="28" width="2554" height="1232" />
     </state>
     <state width="1858" height="309" key="GridCell.Tab.1.left/0.28.1920.1018@0.28.1920.1018" timestamp="1610921788280" />
-    <state width="2492" height="646" key="GridCell.Tab.1.left/0.28.2554.1232@0.28.2554.1232" timestamp="1610994226005" />
-    <state width="2492" height="646" key="GridCell.Tab.1.right" timestamp="1610994226005">
+    <state width="2492" height="646" key="GridCell.Tab.1.left/0.28.2554.1232@0.28.2554.1232" timestamp="1611000113802" />
+    <state width="2492" height="646" key="GridCell.Tab.1.right" timestamp="1611000113802">
       <screen x="0" y="28" width="2554" height="1232" />
     </state>
     <state width="1858" height="309" key="GridCell.Tab.1.right/0.28.1920.1018@0.28.1920.1018" timestamp="1610921788281" />
-    <state width="2492" height="646" key="GridCell.Tab.1.right/0.28.2554.1232@0.28.2554.1232" timestamp="1610994226005" />
+    <state width="2492" height="646" key="GridCell.Tab.1.right/0.28.2554.1232@0.28.2554.1232" timestamp="1611000113802" />
     <state x="39" y="28" width="1125" height="912" key="SettingsEditor" timestamp="1610900599357">
       <screen x="0" y="28" width="1920" height="1018" />
     </state>
@@ -373,16 +375,18 @@
     <state x="39" y="28" width="1369" height="896" key="SettingsEditor/0.28.1918.896@0.28.1918.896" timestamp="1610784457168" />
     <state x="39" y="28" width="1125" height="912" key="SettingsEditor/0.28.1920.1018@0.28.1920.1018" timestamp="1610900599357" />
     <state x="52" y="28" width="1314" height="912" key="SettingsEditor/0.28.2560.1538@0.28.2560.1538" timestamp="1610830719470" />
-    <state x="705" y="125" width="591" height="849" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1610998037407">
+    <state x="705" y="125" width="591" height="849" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1610998121597">
       <screen x="0" y="28" width="2554" height="1232" />
     </state>
     <state x="529" y="98" width="850" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.28.1918.896@0.28.1918.896" timestamp="1610280156285" />
     <state x="530" y="108" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.28.1920.1018@0.28.1920.1018" timestamp="1610908185142" />
-    <state x="705" y="125" width="591" height="849" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.28.2554.1232@0.28.2554.1232" timestamp="1610998037407" />
-    <state x="681" y="28" width="1195" height="1535" key="search.everywhere.popup" timestamp="1611064510034">
-      <screen x="0" y="28" width="2560" height="1538" />
+    <state x="705" y="125" width="591" height="849" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.28.2554.1232@0.28.2554.1232" timestamp="1610998121597" />
+    <state x="707" y="149" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.28.2560.1538@0.28.2560.1538" timestamp="1610986754671" />
+    <state x="679" y="28" width="1193" height="1230" key="search.everywhere.popup" timestamp="1610997456963">
+      <screen x="0" y="28" width="2554" height="1232" />
     </state>
     <state x="510" y="28" width="895" height="894" key="search.everywhere.popup/0.28.1918.896@0.28.1918.896" timestamp="1610794672825" />
+    <state x="679" y="28" width="1193" height="1230" key="search.everywhere.popup/0.28.2554.1232@0.28.2554.1232" timestamp="1610997456963" />
     <state x="681" y="28" width="1195" height="1535" key="search.everywhere.popup/0.28.2560.1538@0.28.2560.1538" timestamp="1611064510034" />
     <state x="623" y="438" width="673" height="205" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1610817075808">
       <screen x="0" y="28" width="1920" height="1018" />
@@ -390,10 +394,11 @@
     <state x="623" y="438" width="673" height="205" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.28.1920.1018@0.28.1920.1018" timestamp="1610817075808" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/devops$oracle_logv2.coverage" NAME="oracle_logv2 Coverage Results" MODIFIED="1610997939342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/devops$oracle_logv2.coverage" NAME="oracle_logv2 Coverage Results" MODIFIED="1610999953675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/devops$oracle_log.coverage" NAME="oracle_log Coverage Results" MODIFIED="1610994028224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/devops$loaddata_os.coverage" NAME="loaddata_os Coverage Results" MODIFIED="1610910519272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/devops$linux_roundcheck.coverage" NAME="linux_roundcheck Coverage Results" MODIFIED="1610879985863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$" />
+    <SUITE FILE_PATH="coverage/devops$oracle_logv3.coverage" NAME="oracle_logv3 Coverage Results" MODIFIED="1610998003131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rdcheck" />
     <SUITE FILE_PATH="coverage/devops$linux_roundcheck__1_.coverage" NAME="linux_roundcheck (1) Coverage Results" MODIFIED="1610973739360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
   </component>
 </project>
