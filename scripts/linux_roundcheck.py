@@ -105,7 +105,8 @@ def check_ntp_config():
         return "E"
 
     ntp_server = [
-        '172.16.0.184', '172.16.0.185',
+        'ntp1.bocd.com.cn',
+        'ntp2.bocd.com.cn',
     ]
 
     # 检查ntp.conf里配置的server是否ntp_server, 在则正常
@@ -142,7 +143,7 @@ def get_ntp():
         ntp["ntp_offset"] = 999.0  # 异常值
     return ntp
 
-
+# 获取所有网卡ip, 用于文件命名
 def get_allip():
     """ get all ip in host, contain netmask
     @return: list, eg: [ ip1/24, ip2/22,...], if null, return []
@@ -181,10 +182,10 @@ def get_mem():
     return physical_percent, virtual_percent
 
 
-# 取使用率最大的分区，除了nfs分区
+# 取本地使用率最大的分区
 def get_fs_used():
     fs_data_used = -1
-    cmd = "df -lkTP|egrep -v 'nfs|Filesystem'|awk '{print $NF,$(NF-1)}'"
+    cmd = "df -lkTP|egrep  'ext|xfs|vxfs|tmpfs'|awk '{print $NF,$(NF-1)}'"
     fs_data = []
     result = os.popen(cmd).readlines()
     for line in result:
@@ -203,7 +204,7 @@ def get_fs_used():
 def get_fs():
     """获取文件系统状态"""
     filesystem = []
-    cmd = "df --block-size=1 -lTP|egrep 'ext|xfs'|awk '{print $NF,$(NF-1),$(NF-2),$2}'"
+    cmd = "df --block-size=1 -lTP|egrep 'ext|xfs|vxfs|tmpfs'|awk '{print $NF,$(NF-1),$(NF-2),$2}'"
     result = os.popen(cmd).readlines()
     for line in result:
         fs, used, free, fs_type = line.strip().split()
@@ -216,7 +217,7 @@ def get_fs():
 
 
 def get_inode_used():
-    cmd = "df -liTP|egrep 'ext|xfs'|awk '{print $NF,$(NF-1)}'"
+    cmd = "df -iTP|egrep 'ext|xfs|tmpfs|nfs'|awk '{print $NF,$(NF-1)}'"
     result = os.popen(cmd).readlines()
     inode_used = []
     for line in result:
@@ -227,13 +228,11 @@ def get_inode_used():
 
 
 def get_nfs():
-    cmd = "mount -t nfs"
+    """如果有nfs返回最大的分区, 如果无返回N"""
+    cmd = "df -kTP|grep nfs|awk '{print $NF,$(NF-1)}'"
+    nfs_data = []
     result = os.popen(cmd).readlines()
-    nfs_flag = ''
     if result:
-        cmd = "df -lkTP|grep nfs|awk '{print $NF,$(NF-1)}'"
-        nfs_data = []
-        result = os.popen(cmd).readlines()
         for line in result:
             fs, used = line.strip().split()
             if used == '100%':
@@ -241,9 +240,7 @@ def get_nfs():
             else:
                 fs_used = int(used.rstrip('%'))
             nfs_data.append(fs_used)
-        if nfs_data:
-            fs_nfs_used = max(nfs_data)  # 取所有数据分区中使用率最大的一个
-            nfs_flag = fs_nfs_used
+        nfs_flag = max(nfs_data)  # 取所有数据分区中使用率最大的一个
     else:
         nfs_flag = 'N'
 
@@ -256,6 +253,7 @@ def get_zabbix():
 
 def get_global(ip):
     cmd = "hostname"
+    hostname = ""
     result = os.popen(cmd).readlines()
     if result:
         hostname = result[0].strip()
@@ -281,17 +279,19 @@ def get_mount_status():
     # 如果fstab挂载使用的是UUID, 需要找到对应的分区
     for line in result:
         if "UUID" in line:
-            uuid.append(line.strip())
+            uuid.append(line.strip().replace('UUID=', ''))
         else:
             fs_fstab.append(line.strip())
     if uuid:
-        cmd = "blkid"
+        cmd = "/usr/bin/ls -l /dev/disk/by-uuid/| grep / | awk '{print $NF, $(NF-2)}'"
         result = os.popen(cmd).readlines()
-        blkid = [id.strip().replace('"', '').split() for id in result]
+        blkid = [id.strip().replace('../../', '/dev/').split() for id in result]
+        print(uuid)
+        print(blkid)
         for line in blkid:
             for id in uuid:
                 if id in line[1]:
-                    fs_fstab.append(line[0][:-1])
+                    fs_fstab.append(line[0])
     # 判断挂载是否是包含关系, 没用set, 为了兼容
     for i in fs_fstab:
         if i not in fs_mounted:
